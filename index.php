@@ -86,7 +86,7 @@ $builder->build('tvnoviny');
                         'src': {
                             'sections': 'https://livedata.cms.markiza.sk/api/v1/gol-mesiaca/sections',
                             'articles': 'https://livedata.cms.markiza.sk/api/v1/gol-mesiaca-staging/detail',
-                            'bridgeValidity': 'https://livedata.cms.markiza.sk/api/v1/gol-mesiaca/sections'
+                            'bridgeValidity': 'https://livedata.cms.markiza.sk/api/v1/gol-mesiaca/sections' //NIKE userID api public service checker
                         },
                         'navigationGlobal': [
                             {fragment: '', url: '#', isActive: 1, name: 'Hlasovanie'},
