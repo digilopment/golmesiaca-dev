@@ -40,6 +40,9 @@ class Builder
     public function getPath()
     {
         $final = $this->getFinal();
+        if (count($final) === 0) {
+            return '';
+        }
         $this->path = '/' . join('/', $final);
         return $this->path;
     }
