@@ -5,6 +5,7 @@ class Builder
 
     private $pairs = [];
     public $path = '';
+    public $baseUrl = '';
 
     public function __construct()
     {
@@ -47,7 +48,8 @@ class Builder
     {
         $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
         $domainName = $_SERVER['HTTP_HOST'];
-        return $protocol . $domainName . $this->getPath() . '/media/src/' . $project . '/index.php';
+        $this->baseUrl = $protocol . $domainName . $this->getPath();
+        return $this->baseUrl . '/media/src/' . $project . '/index.php';
     }
 
     public function build($project)
