@@ -80,8 +80,8 @@ $builder->build('tvnoviny');
                         'competition': {
                             'isEnabled': true,
                             'showProgressBar': true,
-                            'start': 1,
-                            'end': 31
+                            'start': '2023-08-01',
+                            'end': '2023-08-15'
                         },
                         'src': {
                             'sections': 'https://livedata.cms.markiza.sk/api/v1/gol-mesiaca/sections',
