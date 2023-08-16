@@ -59,8 +59,9 @@ $builder->build('tvnoviny');
                         'lang': 'sk',
                         'formId': 116, //100 is production
                         'videoMp4': false,
-                        'primaryColor': '#ffdf00', //NIKE: ff7f03; FORTTUNA: #ffdf00
+                        'primaryColor': '#ff7f03', //NIKE: ff7f03; FORTTUNA: #ffdf00
                         'reverseTextColorOfPrimaryColor': '#000000',
+                        'errorColor': '#cc0000',
                         'formFields': {
                             'layout': 'gol-mesiaca'
                         },
@@ -83,7 +84,7 @@ $builder->build('tvnoviny');
                             'isEnabled': true,
                             'showProgressBar': true,
                             'start': '2023-08-01',
-                            'end': '2023-08-15'
+                            'end': '2023-08-20'
                         },
                         'src': {
                             'sections': 'https://livedata.cms.markiza.sk/api/v1/gol-mesiaca/sections',
