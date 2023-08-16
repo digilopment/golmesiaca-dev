@@ -59,6 +59,8 @@ $builder->build('tvnoviny');
                         'lang': 'sk',
                         'formId': 116, //100 is production
                         'videoMp4': false,
+                        'primaryColor': '#ffdf00', //NIKE: ff7f03; FORTTUNA: #ffdf00
+                        'reverseTextColorOfPrimaryColor': '#000000',
                         'formFields': {
                             'layout': 'gol-mesiaca'
                         },
