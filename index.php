@@ -94,7 +94,7 @@ $builder->build('tvnoviny');
                         'navigationGlobal': [
                             {fragment: '', url: '#', isActive: 1, name: 'Hlasovanie'},
                             {fragment: 'vysledky', url: ROOT_PATH + '#/vysledky', isActive: 0, name: 'Výsledky'},
-                            {fragment: 'archiv', url: ROOT_PATH + '#/archiv', isActive: 0, name: 'Archív'},
+                            {fragment: 'archiv', url: ROOT_PATH + '#/archiv', isActive: 0, name: 'Archív'}
                         ]
                     };
                 </script>
