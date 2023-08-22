@@ -66,7 +66,7 @@ $builder->build('tvnoviny');
                             'layout': 'gol-mesiaca'
                         },
                         'i18n': {
-                            'title': 'Hlasujte za gól mesiaca a vyhrajte ceny v hodnote až 100 eur od stávkovej spoločnosti NIKÉ',
+                            'title': 'Hlasujte za gól mesiaca a vyhrajte 100-eurový kredit od stávkovej spoločnosti NIKÉ',
                             'url': 'golmesiaca.markiza.sk',
                             'endOfVoteMain': 'Hlasovanie v ankete Gól mesiaca sa pre tento mesiac skončilo.',
                             'endOfVoteDescription': 'Do hlasovania sa môžete opäť zapojiť v ďalšom mesiaci.',
@@ -84,7 +84,7 @@ $builder->build('tvnoviny');
                             'isEnabled': true,
                             'showProgressBar': true,
                             'start': '2023-08-01',
-                            'end': '2023-08-22'
+                            'end': '2023-08-20'
                         },
                         'src': {
                             'sections': 'https://livedata.cms.markiza.sk/api/v1/gol-mesiaca/sections',
