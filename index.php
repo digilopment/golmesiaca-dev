@@ -77,7 +77,7 @@ $builder->build('tvnoviny');
                             'statut': 'https://n1.cms.markiza.sk/e2fs/docs/2023/05/31/4dfb60e2-8565-4afa-b7ce-dad754220ba0.pdf',
                             'profiling': 'https://n1.cms.markiza.sk/e2fs/docs/2023/01/09/81785ae5-914f-4118-8e9a-d9d4a3ea42d4.pdf',
                             'personal': 'https://www.markiza.sk/osobne-udaje/clanok/548427-podmienky-a-informacie-o-spracovavani-osobnych-udajov-ucastnikov-a-vyhercov-sutazi',
-                            'slider': 'https://cmesk-ott-images-tvnoviny.ssl.cdn.cra.cz/r952x357n/b079809c-21f2-46e4-a42f-0486200117fd',
+                            'slider': 'https://cmesk-ott-images-tvnoviny.ssl.cdn.cra.cz/r952x357n/0b269df5-be9d-4cd1-b53f-8bfa22b784a7',
                             'banner': ''
                         },
                         'competition': {
