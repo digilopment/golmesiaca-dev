@@ -55,10 +55,24 @@ class Builder
         return $this->baseUrl . '/media/src/' . $project . '/index.php';
     }
 
+    public function getContent($url)
+    {
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        $response = curl_exec($ch);
+        if (curl_errno($ch)) {
+            echo 'cURL Error: ' . curl_error($ch);
+        }
+        curl_close($ch);
+        return $response;
+    }
+
     public function build($project)
     {
         $build = $this->buildUrl($project);
-        return file_get_contents($build);
+        return $this->getContent($build);
     }
 
 }

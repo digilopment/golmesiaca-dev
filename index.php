@@ -50,54 +50,59 @@ $builder->build('tvnoviny');
         <main>
             <div class="container">
                 <script>
-                    const ROOT_PATH = '';
+                    const ROOT_PATH = "";
                     var golMesiacaConfig = {
-                        'id': 'golMesiaca',
-                        'title': 'Gol Mesiaca',
-                        'vendorName': 'TVNOVINY.sk',
-                        'ajax': 'true',
-                        'lang': 'sk',
-                        'formId': 116, //100 is production
-                        'videoMp4': false,
-                        'primaryColor': '#ff7f03', //NIKE: ff7f03; FORTTUNA: #ffdf00
-                        'reverseTextColorOfPrimaryColor': '#000000',
-                        'errorColor': '#cc0000',
-                        'formFields': {
-                            'layout': 'gol-mesiaca'
+                        "id": "golMesiaca",
+                        "title": "Gól mesiaca",
+                        "vendorName": "TVNOVINY.sk",
+                        "ajax": "true",
+                        "lang": "sk",
+                        "formId": 116, //STAGING
+                        "videoMp4": "false",
+                        "primaryColor": "#ff7f03",
+                        "reverseTextColorOfPrimaryColor": "#000000",
+                        "errorColor": "#cc0000",
+                        "formFields": {
+                            "layout": "gol-mesiaca"
                         },
-                        'i18n': {
-                            'title': 'Hlasujte za gól mesiaca a vyhrajte ceny v hodnote až 100 eur od stávkovej spoločnosti NIKÉ',
-                            'url': 'golmesiaca.markiza.sk',
-                            'endOfVoteMain': 'Hlasovanie v ankete Gól mesiaca sa pre tento mesiac skončilo.',
-                            'endOfVoteDescription': 'Do hlasovania sa môžete opäť zapojiť v ďalšom mesiaci.',
-                            'btnVote': 'Hlasovať', //Hlasovanie ukončené | HLASOVAŤ | Hlasovanie nedostupné
-                            'btnEndOrWaitToVote': 'Hlasovanie nedostupné' //this run automaticly on end of event or begin of event //Hlasovanie ukončené | Hlasovanie nedostupné | Hlasovanie čoskoro
+                        "i18n": {
+                            "title": "Hlasujte za gól mesiaca a vyhrajte ceny v hodnote až 100 eur od stávkovej spoločnosti NIKÉ",
+                            "url": "golmesiaca.markiza.sk",
+                            "endOfVoteMain": "Hlasovanie v ankete Gól mesiaca sa pre tento mesiac skončilo.",
+                            "endOfVoteDescription": "Do hlasovania sa môžete opäť zapojiť v ďalšom mesiaci.",
+                            "btnVote": "Hlasovať",
+                            "btnEndOrWaitToVote": "Hlasovanie nedostupné"
                         },
-                        'files': {
-                            'statut': 'https://n1.cms.markiza.sk/e2fs/docs/2023/05/31/4dfb60e2-8565-4afa-b7ce-dad754220ba0.pdf',
-                            'profiling': 'https://n1.cms.markiza.sk/e2fs/docs/2023/01/09/81785ae5-914f-4118-8e9a-d9d4a3ea42d4.pdf',
-                            'personal': 'https://www.markiza.sk/osobne-udaje/clanok/548427-podmienky-a-informacie-o-spracovavani-osobnych-udajov-ucastnikov-a-vyhercov-sutazi',
-                            'slider': 'https://cmesk-ott-images-tvnoviny.ssl.cdn.cra.cz/r952x357n/0b269df5-be9d-4cd1-b53f-8bfa22b784a7',
-                            'banner': ''
+                        "files": {
+                            "statut": "https://n1.cms.markiza.sk/e2fs/docs/2023/08/30/a412f316-3d74-4da7-8a11-81ec2b3553eb.pdf",
+                            "profiling": "https://n1.cms.markiza.sk/e2fs/docs/2023/08/30/0fa4c1e8-0350-4308-a99e-ffe7cde01350.pdf",
+                            "personal": "https://n1.cms.markiza.sk/e2fs/docs/2023/08/30/9fa2570c-044f-42d0-91f0-c0c230850099.pdf",
+                            "slider": "https://cmesk-ott-images-tvnoviny.ssl.cdn.cra.cz/r1000x375n/a9be9fec-da67-499a-b9dd-c0250ca2078b",
+                            "banner": "https://cmesk-ott-images-tvnoviny.ssl.cdn.cra.cz/r313xn/9bbe1fdd-b965-4d31-8bc6-31967c1eb0d4.jpg"
                         },
-                        'competition': {
-                            'isEnabled': true,
-                            'showProgressBar': true,
-                            'start': '2023-08-01',
-                            'end': '2023-08-31'
+                        "competition": {
+                            "isEnabled": "true",
+                            "showProgressBar": "true",
+                            "start": "2023-08-01",
+                            "end": "2023-09-07"
                         },
-                        'src': {
-                            'sections': 'https://livedata.cms.markiza.sk/api/v1/gol-mesiaca/sections',
-                            'articles': 'https://livedata.cms.markiza.sk/api/v1/gol-mesiaca-staging/detail',
-                            'bridgeValidity': 'https://livedata.cms.markiza.sk/api/v1/gol-mesiaca/nike-signature-verifier'
+                        "src": {
+                            "sections": "https://livedata.cms.markiza.sk/api/v1/gol-mesiaca/sections",
+                            "articles": "https://livedata.cms.markiza.sk/api/v1/gol-mesiaca-staging/detail",
+                            "bridgeValidity": "https://livedata.cms.markiza.sk/api/v1/nike-user-verifier"
                         },
-                        'navigationGlobal': [
-                            {fragment: '', url: '#', isActive: 1, name: 'Hlasovanie'},
-                            {fragment: 'vysledky', url: ROOT_PATH + '#/vysledky', isActive: 0, name: 'Výsledky'},
-                            {fragment: 'archiv', url: ROOT_PATH + '#/archiv', isActive: 0, name: 'Archív'}
+                        "navigationGlobal": [
+                            {fragment: "", url: "#", isActive: 1, name: "Hlasovanie"},
+                            {fragment: "vysledky", url: ROOT_PATH + "#/vysledky", isActive: 0, name: "Výsledky"},
+                            {fragment: "archiv", url: ROOT_PATH + "#/archiv", isActive: 0, name: "Archív"}
                         ]
                     };
                 </script>
+                <style>
+                    #renderMainApp-GolMesiaca.renderMainApp .renderAppPreloader.size-16 {
+                        border-top: 16px solid #ff7f03!important;
+                    }
+                </style>
                 <div class="renderMainApp" id="renderMainApp-GolMesiaca">
                     <div class="renderAppPreloader size-16"></div>
                 </div>
