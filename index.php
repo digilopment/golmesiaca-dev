@@ -50,54 +50,54 @@ $builder->build('tvnoviny');
         <main>
             <div class="container">
                 <script>
-                    const ROOT_PATH = "";
-                    var golMesiacaConfig = {
-                        "id": "golMesiaca",
-                        "title": "Gól mesiaca",
-                        "vendorName": "TVNOVINY.sk",
-                        "ajax": "true",
-                        "lang": "sk",
-                        "formId": 116, //STAGING
-                        "videoMp4": "false",
-                        "primaryColor": "#ff7f03",
-                        "reverseTextColorOfPrimaryColor": "#000000",
-                        "errorColor": "#cc0000",
-                        "formFields": {
-                            "layout": "gol-mesiaca"
-                        },
-                        "i18n": {
-                            "title": "Hlasujte za gól mesiaca a vyhrajte ceny v hodnote až 100 eur od stávkovej spoločnosti NIKÉ",
-                            "url": "golmesiaca.markiza.sk",
-                            "endOfVoteMain": "Hlasovanie v ankete Gól mesiaca sa pre tento mesiac skončilo.",
-                            "endOfVoteDescription": "Do hlasovania sa môžete opäť zapojiť v ďalšom mesiaci.",
-                            "btnVote": "Hlasovať",
-                            "btnEndOrWaitToVote": "Hlasovanie nedostupné"
-                        },
-                        "files": {
-                            "statut": "https://n1.cms.markiza.sk/e2fs/docs/2023/08/30/a412f316-3d74-4da7-8a11-81ec2b3553eb.pdf",
-                            "profiling": "https://n1.cms.markiza.sk/e2fs/docs/2023/08/30/0fa4c1e8-0350-4308-a99e-ffe7cde01350.pdf",
-                            "personal": "https://n1.cms.markiza.sk/e2fs/docs/2023/08/30/9fa2570c-044f-42d0-91f0-c0c230850099.pdf",
-                            "slider": "https://cmesk-ott-images-tvnoviny.ssl.cdn.cra.cz/r1000x375n/a9be9fec-da67-499a-b9dd-c0250ca2078b",
-                            "banner": "https://cmesk-ott-images-tvnoviny.ssl.cdn.cra.cz/r313xn/9bbe1fdd-b965-4d31-8bc6-31967c1eb0d4.jpg"
-                        },
-                        "competition": {
-                            "isEnabled": "true",
-                            "showProgressBar": "true",
-                            "start": "2023-08-01",
-                            "end": "2023-09-07"
-                        },
-                        "src": {
-                            "sections": "https://livedata.cms.markiza.sk/api/v1/gol-mesiaca/sections",
-                            "articles": "https://livedata.cms.markiza.sk/api/v1/gol-mesiaca-staging/detail",
-                            "bridgeValidity": "https://livedata.cms.markiza.sk/api/v1/gol-mesiaca/nike-signature-verifier"
-                        },
-                        "navigationGlobal": [
-                            {fragment: "", url: "#", isActive: 1, name: "Hlasovanie"},
-                            {fragment: "vysledky", url: ROOT_PATH + "#/vysledky", isActive: 0, name: "Výsledky"},
-                            {fragment: "archiv", url: ROOT_PATH + "#/archiv", isActive: 0, name: "Archív"}
-                        ]
-                    };
-                </script>
+		    const ROOT_PATH = "";
+		    var golMesiacaConfig = {
+			"id": "golMesiaca",
+			"title": "Gól mesiaca",
+			"vendorName": "TVNOVINY.sk",
+			"ajax": "true",
+			"lang": "sk",
+			"formId": 116,
+			"videoMp4": "false",
+			"primaryColor": "#ff7f03",
+			"reverseTextColorOfPrimaryColor": "#000000",
+			"errorColor": "#cc0000",
+			"formFields": {
+			    "layout": "gol-mesiaca"
+			},
+			"i18n": {
+			    "title": "Hlasujte za gól mesiaca a vyhrajte ceny v hodnote až 100 eur od stávkovej spoločnosti NIKÉ",
+			    "url": "golmesiaca.markiza.sk",
+			    "endOfVoteMain": "Hlasovanie v ankete Gól mesiaca sa pre tento mesiac skončilo.",
+			    "endOfVoteDescription": "Do hlasovania sa môžete opäť zapojiť v ďalšom mesiaci.",
+			    "btnVote": "Hlasovať",
+			    "btnEndOrWaitToVote": "Hlasovanie nedostupné"
+			},
+			"files": {
+			    "statut": "https://n1.cms.markiza.sk/e2fs/docs/2023/08/31/97832325-461a-488b-b1f5-1bec9e2d8959.pdf",
+			    "profiling": "https://n1.cms.markiza.sk/e2fs/docs/2023/08/30/0fa4c1e8-0350-4308-a99e-ffe7cde01350.pdf",
+			    "personal": "https://n1.cms.markiza.sk/e2fs/docs/2023/08/30/9fa2570c-044f-42d0-91f0-c0c230850099.pdf",
+			    "slider": "https://cmesk-ott-images-tvnoviny.ssl.cdn.cra.cz/r1000x375n/a9be9fec-da67-499a-b9dd-c0250ca2078b",
+			    "banner": "https://cmesk-ott-images-tvnoviny.ssl.cdn.cra.cz/r313xn/9bbe1fdd-b965-4d31-8bc6-31967c1eb0d4.jpg"
+			},
+			"competition": {
+			    "isEnabled": "true",
+			    "showProgressBar": "true",
+			    "start": "2023-09-01",
+			    "end": "2023-09-07"
+			},
+			"src": {
+			    "sections": "https://livedata.cms.markiza.sk/api/v1/gol-mesiaca/sections",
+			    "articles": "https://livedata.cms.markiza.sk/api/v1/gol-mesiaca-staging/detail",
+			    "bridgeValidity": "https://livedata.cms.markiza.sk/api/v1/gol-mesiaca/nike-signature-verifier"
+			},
+			"navigationGlobal": [
+			    {fragment: "", url: "#", isActive: 1, name: "Hlasovanie"},
+			    {fragment: "vysledky", url: ROOT_PATH + "#/vysledky", isActive: 0, name: "Výsledky"},
+			    {fragment: "archiv", url: ROOT_PATH + "#/archiv", isActive: 0, name: "Archív"}
+			    ]
+			};
+		</script>
                 <style>
                     #renderMainApp-GolMesiaca.renderMainApp .renderAppPreloader.size-16 {
                         border-top: 16px solid #ff7f03!important;
