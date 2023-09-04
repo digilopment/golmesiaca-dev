@@ -44,7 +44,7 @@ class Report
             if($data['controll']['isReportReady'] === false){
                 $html .= '<tr><th colspan="3" class="line"><h3>Priebežný report</h3><h4>Report sa momentálne aktualizuje. <br/>Počet hlasov v ankete nesúhlasí s celkovým počtom hlasov v databaze. <br/>Dáta sa zjednotia až po dokončení súťažného kola.<br/> Aktualny rozdiel v počte hlasov je: '. ($data['controll']['sumPollData'] - $data['controll']['sumFromService']).'</h4></th></tr>';
             }
-            $html .= '<tr><th>#</th><th>Meno</th><th>Pocet hlasov</th></tr>';
+            $html .= '<tr><th>#</th><th>Meno</th><th>Počet hlasov</th></tr>';
             $html .= '</thead>';
             $html .= '<tbody>';
 
@@ -66,7 +66,7 @@ class Report
             $html .= '</tr>';
 
             //informácie o validCount
-            $html .= '<tr><th colspan="3" class="line"><h2>Počet planých hlasov</h2></th></tr>';
+            $html .= '<tr><th colspan="3" class="line"><h2>Počet platných hlasov</h2></th></tr>';
             $html .= '<tr><th>POČET HLASOV</th><th>z toho MARKIZA</th><th>z toho NIKE</th></tr>';
             $html .= '<td>' . $data['validCount']['votes'] . '</td>';
             $html .= '<td>' . $data['validCount']['nativeUsers'] . '</td>';
