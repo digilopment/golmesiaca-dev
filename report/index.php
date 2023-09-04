@@ -3,8 +3,8 @@
 class Report
 {
 
-    //const SERVICE = 'http://devel.livedata.cms.markiza.sk/api/v1/gol-mesiaca/report';
-    const SERVICE = 'https://golmesiaca.staging.markiza.io/api/v1/report/';
+    const SERVICE = 'https://livedata.cms.markiza.sk/api/v1/gol-mesiaca/report';
+    //const SERVICE = 'https://golmesiaca.staging.markiza.io/api/v1/report/';
 
     public function request()
     {
