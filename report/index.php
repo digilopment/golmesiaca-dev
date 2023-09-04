@@ -7,8 +7,14 @@ class Report
 
     public function request()
     {
+        
+        $roundId = $_GET['roundId'] ?? false;
+        if ($roundId) {
+            $service = self::SERVICE . '?roundId=' . $roundId;
+        } else {
+            $service = self::SERVICE;
+        }
         $curl = curl_init();
-
         curl_setopt_array($curl, array(
             CURLOPT_URL => self::SERVICE,
             CURLOPT_RETURNTRANSFER => true,
