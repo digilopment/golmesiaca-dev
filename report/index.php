@@ -4,7 +4,6 @@ class Report
 {
 
     const SERVICE = 'https://livedata.cms.markiza.sk/api/v1/gol-mesiaca/report';
-    //const SERVICE = 'https://golmesiaca.staging.markiza.io/api/v1/report/';
 
     public function request()
     {
@@ -34,7 +33,7 @@ class Report
     {
         $response = $this->request();
         $data = json_decode($response, true);
-        $enableRandomUser = (bool) $_GET['enableRandomUser'] ?? false;
+        (bool) $enableRandomUser = $_GET['enableRandomUser'] ?? false;
 
         if ($data) {
 
@@ -42,35 +41,39 @@ class Report
             $html .= '<table>';
             $html .= '<thead>';
             $html .= '<tr><th colspan="3" class="line"><h2>Poradie v ankete</h2></th></tr>';
+            if($data['controll']['isReportReady'] === false){
+                $html .= '<tr><th colspan="3" class="line"><h3>Priebežný report</h3><h4>Report sa momentálne aktualizuje. <br/>Počet hlasov v ankete nesúhlasí s celkovým počtom hlasov v databaze. <br/>Dáta sa zjednotia až po dokončení súťažného kola.<br/> Aktualny rozdiel v počte hlasov je: '. ($data['controll']['sumPollData'] - $data['controll']['sumFromService']).'</h4></th></tr>';
+            }
             $html .= '<tr><th>#</th><th>Meno</th><th>Pocet hlasov</th></tr>';
             $html .= '</thead>';
             $html .= '<tbody>';
 
-            foreach ($data['pollData'] as $i => $item) {
+            $i = 1;
+            foreach ($data['pollData'] as $item) {
                 $html .= '<tr>';
-                $html .= '<td>' . $i += 1 . '</td>';
+                $html .= '<td>' . $i++ . '</td>';
                 $html .= '<td>' . $item['title'] . '</td>';
                 $html .= '<td><b>' . $item['votes'] . '</b></td>';
                 $html .= '</tr>';
             }
 
             //informácie o absoluteCount
-            $html .= '<tr><th colspan="3" class="line"><h2>Pocet vsetkých hlasov</h2></th></tr>';
-            $html .= '<tr><th>POCET HLASOV</th><th>z toho MARKIZA</th><th>z toho NIKE</th></tr>';
+            $html .= '<tr><th colspan="3" class="line"><h2>Počet všetkých hlasov</h2></th></tr>';
+            $html .= '<tr><th>POČET HLASOV</th><th>z toho MARKIZA</th><th>z toho NIKE</th></tr>';
             $html .= '<td>' . $data['absoluteCount']['votes'] . '</td>';
             $html .= '<td>' . $data['absoluteCount']['nativeUsers'] . '</td>';
             $html .= '<td>' . $data['absoluteCount']['bridgeUsers'] . '</td>';
             $html .= '</tr>';
 
             //informácie o validCount
-            $html .= '<tr><th colspan="3" class="line"><h2>Pocet planych hlasov</h2></th></tr>';
-            $html .= '<tr><th>POCET HLASOV</th><th>z toho MARKIZA</th><th>z toho NIKE</th></tr>';
+            $html .= '<tr><th colspan="3" class="line"><h2>Počet planých hlasov</h2></th></tr>';
+            $html .= '<tr><th>POČET HLASOV</th><th>z toho MARKIZA</th><th>z toho NIKE</th></tr>';
             $html .= '<td>' . $data['validCount']['votes'] . '</td>';
             $html .= '<td>' . $data['validCount']['nativeUsers'] . '</td>';
             $html .= '<td>' . $data['validCount']['bridgeUsers'] . '</td>';
             $html .= '</tr>';
 
-            if($enableRandomUser){
+            if ($enableRandomUser) {
                 //informácie o random user
                 $html .= '<tr><th class="line" colspan="3"><h2>Nahodní sutaziaci</h2></th></tr>';
                 $html .= '<tr><th>#</th><th>MARKIZA</th><th>NIKE</th></tr>';
