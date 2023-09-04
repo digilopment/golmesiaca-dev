@@ -16,7 +16,7 @@ class Report
         }
         $curl = curl_init();
         curl_setopt_array($curl, array(
-            CURLOPT_URL => self::SERVICE,
+            CURLOPT_URL => $service,
             CURLOPT_RETURNTRANSFER => true,
             CURLOPT_ENCODING => '',
             CURLOPT_MAXREDIRS => 10,
